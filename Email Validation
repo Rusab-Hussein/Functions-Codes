@@ -1,0 +1,18 @@
+Sub Main()
+        Dim s As String
+        Console.Write("Enter email to validate: ")
+        s = Console.ReadLine
+        Console.WriteLine(isEmailValid(s))
+        Console.ReadKey()
+    End Sub
+    Function isEmailValid(ByRef x As String) As String
+        Dim CharPos, PreChar, PostChar As String
+        CharPos = InStr(x, "@")
+        PreChar = Left(x, CharPos - 1)
+        PostChar = Mid(x, CharPos + 1, Len(x))
+        If CharPos = 0 And Len(PreChar) < 1 And Len(PostChar) < 3 Then
+            Return ("Invalid email")
+        Else
+            Return ("Valid Email")
+        End If
+    End Function
