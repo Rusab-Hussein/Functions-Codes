@@ -1,0 +1,14 @@
+    Sub Main()
+        Dim a As Integer
+        Console.Write("Enter number:")
+        a = Console.ReadLine
+        Console.WriteLine(is_even(a))
+        Console.ReadKey()
+    End Sub
+    Function is_even(ByRef x As Integer) As Boolean
+        If x Mod 2 = 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
